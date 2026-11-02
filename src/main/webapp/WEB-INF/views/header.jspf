@@ -1,0 +1,18 @@
+<%@ page pageEncoding="UTF-8" %>
+<%
+    com.testpilot.model.User navUser = (com.testpilot.model.User) session.getAttribute("user");
+%>
+<link rel="stylesheet" href="<%= request.getContextPath() %>/css/style.css">
+<div class="nav">
+  <a class="brand" href="<%= request.getContextPath() %>/">TestPilot AI</a>
+  <div>
+    <% if (navUser != null) { %>
+      <span><%= com.testpilot.util.Html.esc(navUser.getName()) %> (<%= com.testpilot.util.Html.esc(navUser.getRole()) %>)</span>
+      <a href="<%= request.getContextPath() %>/dashboard">Dashboard</a>
+      <a href="<%= request.getContextPath() %>/logout">Logout</a>
+    <% } else { %>
+      <a href="<%= request.getContextPath() %>/login">Login</a>
+      <a href="<%= request.getContextPath() %>/register">Register</a>
+    <% } %>
+  </div>
+</div>

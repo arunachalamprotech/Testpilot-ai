@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, Helvetica, sans-serif; background: #f4f6f9; color: #1f2933; }
+.nav { background: #1e3a8a; color: #fff; padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; }
+.nav a { color: #fff; text-decoration: none; margin-left: 16px; }
+.nav .brand { font-weight: bold; font-size: 18px; margin-left: 0; }
+.card { max-width: 420px; margin: 60px auto; background: #fff; padding: 28px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.card h2 { margin-top: 0; }
+label { display: block; margin: 14px 0 4px; font-size: 14px; }
+input[type=text], input[type=email], input[type=password] { width: 100%; padding: 10px; border: 1px solid #c4ccd6; border-radius: 4px; font-size: 14px; }
+button { width: 100%; margin-top: 20px; padding: 11px; background: #1a56db; color: #fff; border: 0; border-radius: 4px; font-size: 15px; cursor: pointer; }
+button:hover { background: #1445b0; }
+.error { background: #fde8e8; color: #9b1c1c; padding: 10px; border-radius: 4px; margin-bottom: 8px; }
+.success { background: #def7ec; color: #03543f; padding: 10px; border-radius: 4px; margin-bottom: 8px; }
+.muted { color: #637381; font-size: 14px; margin-top: 16px; }
+.wrap { max-width: 960px; margin: 32px auto; padding: 0 16px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px; }
+.tile { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 4px rgba(0,0,0,.1); }
+.tile h3 { margin: 0 0 8px; font-size: 16px; }
+.tile p { margin: 0; color: #637381; font-size: 14px; }

@@ -1,22 +1,23 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%
+    if (session.getAttribute("user") != null) {
+        response.sendRedirect(request.getContextPath() + "/dashboard");
+        return;
+    }
+%>
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>TestPilot AI</title>
-  <style>
-    body { font-family: Arial, sans-serif; background:#f4f6f9; margin:0; }
-    .box { max-width:640px; margin:80px auto; background:#fff; padding:32px; border-radius:8px; }
-    h1 { margin-top:0; }
-    a { color:#1a56db; }
-  </style>
-</head>
+<head><meta charset="UTF-8"><title>TestPilot AI</title></head>
 <body>
-  <div class="box">
-    <h1>TestPilot AI</h1>
-    <p>Intelligent Software Testing &amp; Bug Prediction Platform</p>
-    <p>The server is running.</p>
-    <p><a href="<%= request.getContextPath() %>/dbtest">Check database connection</a></p>
-  </div>
+<%@ include file="/WEB-INF/views/header.jspf" %>
+<div class="card" style="max-width:640px">
+  <h2>TestPilot AI</h2>
+  <p>Intelligent Software Testing &amp; Bug Prediction Platform</p>
+  <p>
+    <a href="<%= request.getContextPath() %>/login">Login</a> |
+    <a href="<%= request.getContextPath() %>/register">Register</a> |
+    <a href="<%= request.getContextPath() %>/dbtest">Check database connection</a>
+  </p>
+</div>
 </body>
 </html>
