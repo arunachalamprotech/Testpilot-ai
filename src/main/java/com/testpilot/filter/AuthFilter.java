@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 /** Only logged-in users can open the pages listed in urlPatterns. */
-@WebFilter(urlPatterns = {"/dashboard"})
+@WebFilter(urlPatterns = {"/dashboard", "/requirements"})
 public class AuthFilter implements Filter {
 
     @Override

@@ -9,6 +9,7 @@
     <% if (navUser != null) { %>
       <span><%= com.testpilot.util.Html.esc(navUser.getName()) %> (<%= com.testpilot.util.Html.esc(navUser.getRole()) %>)</span>
       <a href="<%= request.getContextPath() %>/dashboard">Dashboard</a>
+      <a href="<%= request.getContextPath() %>/requirements">Requirements</a>
       <a href="<%= request.getContextPath() %>/logout">Logout</a>
     <% } else { %>
       <a href="<%= request.getContextPath() %>/login">Login</a>
