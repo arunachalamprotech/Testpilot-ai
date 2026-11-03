@@ -51,8 +51,9 @@
           <td><%= Html.esc(r.getCreatedByName()) %></td>
           <td><%= Html.esc(created) %></td>
           <td>
+            <a class="btn btn-small btn-ai" href="<%= ctx %>/testcases?requirementId=<%= r.getId() %>">Test cases</a>
             <a class="btn btn-small" href="<%= ctx %>/requirements?action=edit&id=<%= r.getId() %>">Edit</a>
-            <form method="post" action="<%= ctx %>/requirements" onsubmit="return confirm('Delete this requirement?');">
+            <form method="post" action="<%= ctx %>/requirements" onsubmit="return confirm('Delete this requirement and all its test cases?');">
               <input type="hidden" name="action" value="delete">
               <input type="hidden" name="id" value="<%= r.getId() %>">
               <input type="hidden" name="csrf" value="<%= Html.esc(csrf) %>">

@@ -14,7 +14,11 @@
       <div class="count"><%= Html.esc(request.getAttribute("reqCount")) %></div>
       <a href="<%= request.getContextPath() %>/requirements">Open requirements</a>
     </div>
-    <div class="tile"><h3>Test Cases</h3><p>Coming soon</p></div>
+    <div class="tile">
+      <h3>Test Cases</h3>
+      <div class="count"><%= Html.esc(request.getAttribute("tcCount")) %></div>
+      <a href="<%= request.getContextPath() %>/requirements">Manage from a requirement</a>
+    </div>
     <div class="tile"><h3>Bugs</h3><p>Coming soon</p></div>
     <div class="tile"><h3>Test Runs</h3><p>Coming soon</p></div>
   </div>
